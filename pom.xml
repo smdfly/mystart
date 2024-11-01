@@ -139,14 +139,6 @@
             <version>3.18.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.sun</groupId>
-            <artifactId>rt</artifactId>
-            <version>1.8</version>
-            <scope>system</scope>
-            <systemPath>C:\Program Files\Java\jdk1.8.0_73\jre\lib\rt.jar</systemPath>
-        </dependency>
-
     </dependencies>
 
     <build>

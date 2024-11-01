@@ -19,8 +19,8 @@ public class ScheduledTaskMysql {
     public ScheduledTaskMysql(MysqlDistributedLock mysqlDistributedLock) {
         this.mysqlDistributedLock = mysqlDistributedLock;
     }
-    @Autowired
-    LockMapper lockMapper;
+
+  private LockMapper lockMapper;
 
   //  @Scheduled(cron = "0,5,10,15,20,25,30,35,40,45,50,55 * * * * *?")
     public void executeTask() throws InterruptedException {

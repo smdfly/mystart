@@ -1,5 +1,7 @@
 package cn.itcast.mp.tasklock;
 
+import cn.itcast.mp.pojo.User;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -8,7 +10,7 @@ import org.apache.ibatis.annotations.Update;
 import java.time.LocalDateTime;
 import java.util.Map;
 
-public interface LockMapper {
+public interface LockMapper extends BaseMapper<User> {
 //
 //    @Select("SELECT COUNT(*) FROM distributed_lock WHERE lock_name = #{lockName}")
 //    int countLock(String lockName);
