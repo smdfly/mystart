@@ -12,7 +12,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @MapperScan("cn.itcast.mp")
 @EnableScheduling
 @EnableAsync
-@ComponentScan
 public class MyApplication {
 
     public static void main(String[] args) {
