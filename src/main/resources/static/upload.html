@@ -54,7 +54,7 @@
             const formData = new FormData();
             formData.append('file', fileInput.files[0]);
 
-            fetch('http://localhost:8080/api/excel/upload', { // 将 URL 替换为你的后端服务地址
+            fetch('http://localhost:8082/api/excel/upload', { // 将 URL 替换为你的后端服务地址
                 method: 'POST',
                 body: formData
             })

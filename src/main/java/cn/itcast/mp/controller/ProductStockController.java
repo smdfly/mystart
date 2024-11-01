@@ -1,12 +1,18 @@
 package cn.itcast.mp.controller;
 
 
+import cn.itcast.mp.pojo.User;
+import cn.itcast.mp.services.UserService;
+import cn.itcast.mp.services.impl.UserServicedd;
 import cn.itcast.mp.tasklock.ScheduledTask;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 产品库存表
@@ -19,6 +25,9 @@ public class ProductStockController {
     @Resource
     private ScheduledTask scheduledTask;
 
+    @Autowired
+    private UserServicedd userService;
+
     /**
      * 模拟减库存操作 - MySQL 乐观锁 实现
      *
@@ -27,6 +36,21 @@ public class ProductStockController {
     @GetMapping("/reduceStock/{id}")
     public String reduceStockOptimism(@PathVariable("id") Integer id) throws InterruptedException {
         return scheduledTask.executeTask();
+    }
+
+    @GetMapping("/userlist")
+    public String user()  {
+
+        List<User> list=new ArrayList<>();
+        for (int i = 0; i < 100000; i++) {
+
+            User user=new User();
+            user.setId((long) i);
+            user.setUserName("fdfas"+i);
+            list.add(user);
+        }
+
+        return userService.Tret(list );
     }
 
     /**

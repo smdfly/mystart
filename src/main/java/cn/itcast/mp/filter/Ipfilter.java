@@ -15,8 +15,10 @@ public class Ipfilter implements Filter {
 
         HttpServletRequest httpServletRequest= (HttpServletRequest) request;
         String remoteip=httpServletRequest.getRemoteAddr();
+      //http请求报文获取
         String requestBody= httpServletRequest.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
-
+        httpServletRequest.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+        System.out.println("Ipfilter请求报文------------------------>"+requestBody);
         System.out.println("进入过滤器");
         if(allowip.equals(remoteip)){
             ( (HttpServletResponse)response).sendError(201,"ip不允许");
