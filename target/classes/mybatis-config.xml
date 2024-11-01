@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    
+    <!--<plugins>-->
+        <!--<plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"></plugin>-->
+    <!--</plugins>-->
+
+<!--    <plugins>-->
+<!--        &lt;!&ndash; 性能分析插件 &ndash;&gt;-->
+<!--&lt;!&ndash;        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor">&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash;最大的执行时间，单位为毫秒&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <property name="maxTime" value="100"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash;对输出的SQL做格式化，默认为false&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <property name="format" value="true"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        </plugin>&ndash;&gt;-->
+
+<!--        &lt;!&ndash;乐观锁插件&ndash;&gt;-->
+<!--&lt;!&ndash;        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor"/>&ndash;&gt;-->
+<!--    </plugins>-->
+
+</configuration>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件上传示例</title>
+</head>
+<body>
+<h1>文件上传示例</h1>
+<form id="uploadForm">
+    <input type="file" id="fileInput" name="file" accept=".csv, .xlsx, .txt" required>
+    <i>（注：请上传djfkdjkfdsb表）</i>
+    <button type="submit">上传文件</button>
+
+</form>
+<form id="uploadForm1">
+    <input type="file" id="fileInput1" name="file" accept=".csv, .xlsx, .txt" required>
+    <i>请上传djfkdjkfdsb表</i>
+    <button type="submit">上传文件</button>
+</form>
+<form id="uploadForm2">
+    <input type="file" id="fileInput2" name="file" accept=".csv, .xlsx, .txt" required>
+    <i>请上传djfkdjkfdsb表</i>
+    <button type="submit">上传文件</button>
+</form>
+<form id="uploadForm3">
+    <input type="file" id="fileInput3" name="file" accept=".csv, .xlsx, .txt" required>
+    <i>请上传djfkdjkfdsb表</i>
+    <button type="submit">上传文件</button>
+</form><form id="uploadForm4">
+    <input type="file" id="fileInput4" name="file" accept=".csv, .xlsx, .txt" required>
+    <i>请上传djfkdjkfdsb表</i>
+    <button type="submit">上传文件</button>
+</form><form id="uploadForm5">
+    <input type="file" id="fileInput5" name="file" accept=".csv, .xlsx, .txt" required>
+    <i>请上传djfkdjkfdsb表</i>
+    <button type="submit">上传文件</button>
+</form><form id="uploadForm6">
+    <input type="file" id="fileInput6" name="file" accept=".csv, .xlsx, .txt" required>
+    <i>请上传djfkdjkfdsb表</i>
+    <button type="submit">上传文件</button>
+</form>
+
+
+
+
+<div id="responseMessage"></div>
+
+<script>
+        document.getElementById('uploadForm').onsubmit = function(event) {
+            event.preventDefault(); // 防止表单默认提交
+
+            const fileInput = document.getElementById('fileInput');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            fetch('http://localhost:8082/api/excel/upload', { // 将 URL 替换为你的后端服务地址
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                document.getElementById('responseMessage').innerText = "上传成功: " + data.message;
+            })
+            .catch(error => {
+                console.error('Error:', error)
+                document.getElementById('responseMessage').innerText = "上传失败: " + error.message;
+            });
+        };
+         document.getElementById('uploadForm1').onsubmit = function(event) {
+            event.preventDefault(); // 防止表单默认提交
+
+            const fileInput = document.getElementById('fileInput');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            fetch('http://localhost:8080/api/excel/upload', { // 将 URL 替换为你的后端服务地址
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseMessage').innerText = "上传成功: " + data.message;
+            })
+            .catch(error => {
+                document.getElementById('responseMessage').innerText = "上传失败: " + error.message;
+            });
+        };
+         document.getElementById('uploadForm2').onsubmit = function(event) {
+            event.preventDefault(); // 防止表单默认提交
+
+            const fileInput = document.getElementById('fileInput');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            fetch('http://localhost:8080/api/excel/upload', { // 将 URL 替换为你的后端服务地址
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseMessage').innerText = "上传成功: " + data.message;
+            })
+            .catch(error => {
+                document.getElementById('responseMessage').innerText = "上传失败: " + error.message;
+            });
+        };
+
+         document.getElementById('uploadForm3').onsubmit = function(event) {
+            event.preventDefault(); // 防止表单默认提交
+
+            const fileInput = document.getElementById('fileInput');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            fetch('http://localhost:8080/api/excel/upload', { // 将 URL 替换为你的后端服务地址
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseMessage').innerText = "上传成功: " + data.message;
+            })
+            .catch(error => {
+                document.getElementById('responseMessage').innerText = "上传失败: " + error.message;
+            });
+        };
+         document.getElementById('uploadForm4').onsubmit = function(event) {
+            event.preventDefault(); // 防止表单默认提交
+
+            const fileInput = document.getElementById('fileInput');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            fetch('http://localhost:8080/api/excel/upload', { // 将 URL 替换为你的后端服务地址
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseMessage').innerText = "上传成功: " + data.message;
+            })
+            .catch(error => {
+                document.getElementById('responseMessage').innerText = "上传失败: " + error.message;
+            });
+        };
+         document.getElementById('uploadForm5').onsubmit = function(event) {
+            event.preventDefault(); // 防止表单默认提交
+
+            const fileInput = document.getElementById('fileInput');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            fetch('http://localhost:8080/api/excel/upload', { // 将 URL 替换为你的后端服务地址
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseMessage').innerText = "上传成功: " + data.message;
+            })
+            .catch(error => {
+                document.getElementById('responseMessage').innerText = "上传失败: " + error.message;
+            });
+        };
+         document.getElementById('uploadForm6').onsubmit = function(event) {
+            event.preventDefault(); // 防止表单默认提交
+
+            const fileInput = document.getElementById('fileInput');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            fetch('http://localhost:8080/api/excel/upload', { // 将 URL 替换为你的后端服务地址
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseMessage').innerText = "上传成功: " + data.message;
+            })
+            .catch(error => {
+                document.getElementById('responseMessage').innerText = "上传失败: " + error.message;
+            });
+        };
+    </script>
+</body>
+</html>
