@@ -50,7 +50,8 @@ public class ProductStockController {
             list.add(user);
         }
 
-        return userService.Tret(list );
+    //    return userService.Tret(list );
+        return userService.batchInsertUsers(list );
     }
 
     /**
